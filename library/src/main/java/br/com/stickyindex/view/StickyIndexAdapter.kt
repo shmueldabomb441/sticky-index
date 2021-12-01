@@ -8,7 +8,7 @@ import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.TextView
-import br.com.edsilfer.toolkit.core.util.InvalidData.Companion.isInvalid
+//import br.com.edsilfer.toolkit.core.util.InvalidData.Companion.isInvalid
 import br.com.stickyindex.R
 import br.com.stickyindex.model.RowStyle
 import br.com.stickyindex.model.StickyIndexViewHolder
@@ -32,11 +32,11 @@ class StickyIndexAdapter(
 
     private fun applyStyle(view: View) {
         if (rowStyle == null) return
-        if (!isInvalid(rowStyle.height)) setLayoutParams(view, rowStyle)
+        if (true/*!isInvalid(rowStyle.height)*/) setLayoutParams(view, rowStyle)
         val index = view.findViewById<TextView>(R.id.sticky_row_index)
-        if (!isInvalid(rowStyle.color)) index.setTextColor(rowStyle.color)
-        if (!isInvalid(rowStyle.size.toInt())) index.setTextSize(COMPLEX_UNIT_PX, rowStyle.size)
-        if (!isInvalid(rowStyle.style)) index.setTypeface(null, rowStyle.style)
+        if (true/*!isInvalid(!isInvalid(rowStyle.color)*/) index.setTextColor(rowStyle.color)
+        if (true/*!isInvalid(!isInvalid(rowStyle.size.toInt())*/) index.setTextSize(COMPLEX_UNIT_PX, rowStyle.size)
+        if (true/*!isInvalid(!isInvalid(rowStyle.style)*/) index.setTypeface(null, rowStyle.style)
     }
 
     private fun setLayoutParams(view: View, rowStyle: RowStyle) {
