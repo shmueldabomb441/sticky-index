@@ -22,7 +22,7 @@ object RowStyleMapper {
                 typedArray.getDimension(R.styleable.StickyIndex_stickyWidth, 60.toFloat()),
                 typedArray.getColor(R.styleable.StickyIndex_android_textColor, ContextCompat.getColor(context, R.color.index_text_color)),
                 typedArray.getDimension(R.styleable.StickyIndex_android_textSize, DEFAULT_TEXT_SIZE),
-                typedArray.getInt(R.styleable.StickyIndex_android_textStyle, 1)//TODO not sure what UNINITIALIZED.getInt() returned
+                typedArray.getInt(R.styleable.StickyIndex_android_textStyle, 1)//TODO not sure what InvalidData.UNINITIALIZED.getInt() returned
         )
         typedArray.recycle()
         return style
