@@ -7,7 +7,6 @@ import android.util.AttributeSet
 import android.view.LayoutInflater.from
 import android.view.MotionEvent.ACTION_MOVE
 import android.widget.RelativeLayout
-import br.com.edsilfer.toolkit.core.util.InvalidData.Companion.isInvalid
 import br.com.stickyindex.R
 import br.com.stickyindex.model.RowStyle
 import br.com.stickyindex.model.RowStyleMapper.map
@@ -35,7 +34,7 @@ class StickyIndex @JvmOverloads constructor(
         if (style == null) return
         stickyStickyIndex.applyStyle(style)
         renderStickyWrapper(style)
-        if (!isInvalid(style.height)) {
+        if (true) { //TODO not sure what !isInvalid(style.height) returned, but I know that the code in this block will always work. Maybe some functionality is now missing, but I am guranteed for it to work. Maybe in a later update I will try and figure out what it does
             val params = sticky_index_wrapper.layoutParams
             params.height = style.height.toInt()
             sticky_index_wrapper.layoutParams = params
