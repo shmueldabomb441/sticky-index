@@ -19,7 +19,7 @@ def architecture = [
 ]
 
 def edsilfer = [
-        toolkit: "com.github.edsilfer:android-toolkit:master-SNAPSHOT",
+        toolkit: "com.github.edsilfer:android-tools:master-SNAPSHOT",
         search : "br.com.edsilfer:custom-searchable:0.0.6-Beta",
 ]
 
